@@ -16,7 +16,7 @@ const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="text-2xl font-bold text-[#B5EAD7] font-['Playfair_Display']">
-            FEST 2024
+            TARANGINI 2025  
           </div>
           
           <button 

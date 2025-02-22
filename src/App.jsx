@@ -1,33 +1,32 @@
 import { useState } from 'react';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Events from './components/Events';
-import Schedule from './components/Schedule';
-import Registration from './components/Registration';
-import Gallery from './components/Gallery';
-import Sponsors from './components/Sponsors';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Home } from './pages/Home';
+import { ThemeProvider, useTheme } from './context/ThemeContext';
 
-function App() {
+function AppContent() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { colors } = useTheme();
 
   return (
-    <div className="min-h-screen bg-neutral-900">
+    <div className={`min-h-screen ${colors.background}`}>
       <Navbar isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} />
-      <main>
-        <Hero />
-        <About />
-        <Events />
-        <Schedule />
-        <Registration />
-        <Gallery />
-        <Sponsors />
-        <Contact />
-      </main>
-      <Footer />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+        <Footer />
+      </Router>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <ThemeProvider>
+      <AppContent />
+    </ThemeProvider>
   );
 }
 
