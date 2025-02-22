@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{useState }from 'react'
 import  Hero  from '../components/Hero'
 import  About  from '../components/About'
 import  Events  from '../components/Events'
@@ -10,6 +10,7 @@ import  Contact  from '../components/Contact'
 
 
 export const Home = () => {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
     <div className="min-h-screen bg-neutral-900"> 
    <main>

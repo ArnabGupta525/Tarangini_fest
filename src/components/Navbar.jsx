@@ -19,9 +19,10 @@ const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
             TARANGINI 2025  
           </div>
           
-          <button 
-            className="lg:hidden text-white focus:outline-none"
+          <button
+            className="lg:hidden text-white p-2 rounded-lg hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[#B5EAD7] transition-colors duration-300"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -39,22 +40,22 @@ const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
           </div>
         </div>
 
-        {isMobileMenuOpen && (
-          <div className="lg:hidden py-4">
-            <div className="flex flex-col space-y-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="text-white hover:text-[#B5EAD7] transition-colors duration-300 font-['Montserrat']"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {link.label}
-                </a>
-              ))}
-            </div>
-          </div>
-        )}
+        <div className={`lg:hidden fixed inset-x-0 bg-neutral-900/95 backdrop-blur-md transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'}`}>
+                    <div className="container mx-auto px-6 py-8">
+                      <div className="flex flex-col space-y-6">
+                        {navLinks.map((link) => (
+                          <a
+                            key={link.href}
+                            href={link.href}
+                            className="text-lg text-white hover:text-[#B5EAD7] transition-colors duration-300 font-['Montserrat'] py-2"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                          >
+                            {link.label}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
       </nav>
     </header>
   );
