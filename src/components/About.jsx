@@ -34,10 +34,10 @@ const About = () => {
 
           <div className="animate__animated animate__fadeInRight">
             <h2 className="text-4xl lg:text-5xl font-bold text-neutral-800 mb-6 font-['Playfair_Display']">
-              About UniverCity Fest
+              About The Fest
             </h2>
             <p className="text-lg text-neutral-600 mb-6 font-['Montserrat']">
-              UniverCity Fest is the annual cultural and technical festival that brings together talented students from across the nation. Experience three days of innovation, creativity, and celebration.
+              Tarangini is the annual cultural and technical festival that brings together talented students from across the college. Experience two days of enjoyment, creativity, and celebration.
             </p>
             <div className="space-y-4">
               <div className="flex items-center gap-4">
@@ -45,7 +45,7 @@ const About = () => {
                   <Clock className="h-6 w-6 text-neutral-800" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-neutral-800 font-['Playfair_Display']">3 Days of Events</h3>
+                  <h3 className="text-xl font-bold text-neutral-800 font-['Playfair_Display']">2 Days of Events</h3>
                   <p className="text-neutral-600 font-['Montserrat']">Packed schedule of competitions and shows</p>
                 </div>
               </div>
@@ -54,8 +54,8 @@ const About = () => {
                   <Users className="h-6 w-6 text-neutral-800" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-neutral-800 font-['Playfair_Display']">50+ Participating Colleges</h3>
-                  <p className="text-neutral-600 font-['Montserrat']">National level participation</p>
+                  <h3 className="text-xl font-bold text-neutral-800 font-['Playfair_Display']">15+ Exciting events</h3>
+                  <p className="text-neutral-600 font-['Montserrat']">All years are permitted</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -63,7 +63,7 @@ const About = () => {
                   <DollarSign className="h-6 w-6 text-neutral-800" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-neutral-800 font-['Playfair_Display']">₹5L+ Prize Pool</h3>
+                  <h3 className="text-xl font-bold text-neutral-800 font-['Playfair_Display']">Certifications for Participants</h3>
                   <p className="text-neutral-600 font-['Montserrat']">Exciting rewards for winners</p>
                 </div>
               </div>

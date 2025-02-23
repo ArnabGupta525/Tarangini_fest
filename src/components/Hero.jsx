@@ -7,14 +7,14 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-left animate__animated animate__fadeInLeft">
             <h1 className="text-6xl lg:text-7xl font-bold text-[#B5EAD7] mb-6 font-['Playfair_Display'] leading-tight">
-              UniverCity<br/>Fest 2024
+             Tarangini <br/> 2K25
             </h1>
             <p className="text-xl text-[#BCC1BA] mb-8 font-['Montserrat'] max-w-lg">
               Experience the ultimate college festival with competitions, performances, and unforgettable moments.
             </p>
             <div className="flex flex-wrap gap-4">
               <button className="bg-[#B5EAD7] text-neutral-900 px-8 py-4 rounded-full hover:bg-[#BCC1BA] transition-colors duration-300 font-['Montserrat'] font-bold flex items-center gap-2 animate__animated animate__pulse animate__infinite">
-                Register Now
+                Registrations Open
                 <ArrowRight size={20} />
               </button>
               <button className="border-2 border-[#BCC1BA] text-[#BCC1BA] px-8 py-4 rounded-full hover:bg-[#BCC1BA] hover:text-neutral-900 transition-colors duration-300 font-['Montserrat'] font-bold">
@@ -23,17 +23,17 @@ const Hero = () => {
             </div>
             <div className="mt-12 flex items-center gap-6">
               <div className="text-white">
-                <h3 className="text-4xl font-bold font-['Playfair_Display']">20+</h3>
+                <h3 className="text-4xl font-bold font-['Playfair_Display']">15+</h3>
                 <p className="text-sm opacity-80">Events</p>
               </div>
               <div className="h-12 w-px bg-white/20"></div>
-              <div className="text-white">
+              {/* <div className="text-white">
                 <h3 className="text-4xl font-bold font-['Playfair_Display']">50+</h3>
                 <p className="text-sm opacity-80">Colleges</p>
-              </div>
-              <div className="h-12 w-px bg-white/20"></div>
+              </div> */}
+              <div className="h-12 w-px "></div>
               <div className="text-white">
-                <h3 className="text-4xl font-bold font-['Playfair_Display']">5K+</h3>
+                <h3 className="text-4xl font-bold font-['Playfair_Display']">200+</h3>
                 <p className="text-sm opacity-80">Participants</p>
               </div>
             </div>

@@ -1,14 +1,14 @@
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
   const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/events", label: "Events" },
-    { href: "/schedule", label: "Schedule" },
-    { href: "/registration", label: "Register" },
-    { href: "/gallery", label: "Gallery" },
-    { href: "/contact", label: "Contact" }
+    { to: "/", label: "Home" },
+    { to: "/events", label: "Events" },
+    { to: "/schedule", label: "Schedule" },
+    { to: "/registration", label: "Register" },
+    { to: "/gallery", label: "Gallery" },
+    { to: "/contact", label: "Contact" }
   ];
 
   return (
@@ -16,9 +16,9 @@ const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
       <div className="relative">
         <nav className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="text-2xl font-bold text-[#B5EAD7] font-['Playfair_Display']">
-              TARANGINI 2025
-            </div>
+            <Link to="/" className="text-2xl font-bold text-[#B5EAD7] font-['Playfair_Display']">
+              TARANGINI 2K25
+            </Link>
             
             <button
               className="lg:hidden text-white p-2 rounded-lg hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[#B5EAD7] transition-colors duration-300"
@@ -30,13 +30,13 @@ const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
 
             <div className="hidden lg:flex items-center space-x-8">
               {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
+                <Link
+                  key={link.to}
+                  to={link.to}
                   className="text-white hover:text-[#B5EAD7] transition-colors duration-300 font-['Montserrat']"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -50,14 +50,14 @@ const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
           <div className="container mx-auto px-6 py-6">
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
+                <Link
+                  key={link.to}
+                  to={link.to}
                   className="text-lg text-white hover:text-[#B5EAD7] transition-colors duration-300 font-['Montserrat'] py-2"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
